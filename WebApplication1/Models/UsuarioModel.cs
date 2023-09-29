@@ -22,7 +22,7 @@ namespace WebApplication1.Models
 
         public bool SenhaValida(string senha)
         {
-            return Senha == senha;
+            return Senha == senha.GerarHash();
         }
 
         public void SetSenhaHash()

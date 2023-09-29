@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using WebApplication1.Enums;
+using WebApplication1.Helper;
 
 namespace WebApplication1.Models
 {
@@ -22,6 +23,11 @@ namespace WebApplication1.Models
         public bool SenhaValida(string senha)
         {
             return Senha == senha;
+        }
+
+        public void SetSenhaHash()
+        {
+            Senha = Senha.GerarHash();
         }
     }
 }

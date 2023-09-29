@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebApplication1.Filters;
 using WebApplication1.Models;
 using WebApplication1.Repositorio;
 
 namespace WebApplication1.Controllers
 {
+    [PaginaRestritaAdmin]
     public class UsuarioController : Controller
     {
         private readonly IUsuarioRepositorio _usuarioRepositorio;
